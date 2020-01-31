@@ -40,11 +40,25 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+The purpose of using sessions is to preserve data that a developer wants preserved on page load. Like for instance you can add the __loggedin flag to track if user is still logged in
+
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+Bcyrpt uses a hashing algorithm to compute a hash of the users password.It does this by incorporating a salt to protect against rainbow table attacks and using an iteration count to make the hashing process slower.
+
 
 - [ ] What does bcrypt do to slow down attackers?
 
+Bcrypt slows down attackers by:
+	1.Using salt - randomly generated
+	2. Using a cost parameter that species a number of rounds to be performed on the user's password and the salt 
+	3. A user passwords
+This makes it difficult for hackers to hack because you need to hack all the 3 above to get the password.
+
 - [ ] What are the three parts of the JSON Web Token?
+
+Header, payload and signature
 
 ## Minimum Viable Product
 
