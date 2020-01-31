@@ -5,4 +5,7 @@ async function insert(user) {
     .where({ id })
     .first();
 }
-module.exports = {insert}
+function find(){
+    return db("users");
+  }
+module.exports = {insert, find}
