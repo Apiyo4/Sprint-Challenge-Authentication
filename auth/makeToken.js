@@ -1,16 +1,15 @@
 const jwt = require('jsonwebtoken');
-const makeToken = (user)=>{      //put in middlewares
-    const payload = {
+const makeToken = (user)=>{     
+   const payload = {
       sub: user.id,
-      username: user.username,
-      department: user.department,
+      username: user.username
     };
     const options = {
       expiresIn: '12h',
     };
     const token = jwt.sign(
       payload,
-      process.env.JWT_SECRET,   
+      process.env.JWT_SECRET||'abcd',   
       options,
     );
     return token;
