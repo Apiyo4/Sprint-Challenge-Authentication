@@ -8,4 +8,8 @@ async function insert(user) {
 function find(){
     return db("users");
   }
-module.exports = {insert, find}
+
+  function findById(id){
+    return db('users').where({id}).first();
+  } 
+module.exports = {insert, find, findById}
